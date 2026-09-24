@@ -1,6 +1,6 @@
 package com.campus.model;
 
-public class Student{
+public abstract class Student{
     
     private int studentid;
     private String studentname;
@@ -12,8 +12,8 @@ public class Student{
     static int studentCount=0;
 
     //Default constructor
-    public student(){
-        studntCount++;
+    public Student(){
+        studentCount++;
     }
 
     // parameterized constructor
@@ -73,9 +73,12 @@ public class Student{
             System.out.println("Marks: "+java.util.Arrays.toString(marks));
         }
     }
+    //abtract method
+    public abstract void studentType();
 
+    
     //static methods-belongs to class,not to object
-    public static void displayStudentCount(){
+    public  static void displayStudentCount(){
         System.out.println("Total number of students: "+studentCount);
     }
 
