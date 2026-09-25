@@ -3,21 +3,16 @@ package com.campus.model;
 public class ScholarshipStudent extends Student {
     private double scholarshipPercentage;
 
-    public ScholarshipStudent() {
-        super();
-        this.scholarshipPercentage = 0.0;
-    }
-
     public ScholarshipStudent(int studentid, String studentname, int age, String department, int[] marks) {
-        super(studentid, studentname, age, department, marks);
-        this.scholarshipPercentage = 0.0;
+        this(studentid, studentname, age, department, marks, 0.0);
     }
 
     public ScholarshipStudent(int studentid, String studentname, int age, String department, int[] marks, double scholarshipPercentage) {
         super(studentid, studentname, age, department, marks);
         this.scholarshipPercentage = scholarshipPercentage;
     }
-
+    
+    //getters and setters
     public double getScholarshipPercentage() {
         return scholarshipPercentage;
     }
@@ -30,4 +25,5 @@ public class ScholarshipStudent extends Student {
     public void studentType() {
         System.out.println("This is a Scholarship Student.");
     }
+
 }
